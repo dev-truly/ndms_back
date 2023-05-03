@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="DdObsvMapper">
+
+    <select id="selectTcmCouDdObsvById" resultType="com.satech.ndms.entity.TcmCouDdObsv">
+        SELECT
+            DSCODE,
+            CD_DIST_OBSV,
+            GB_OBSV,
+            NM_DIST_OBSV,
+            BDONG_CD,
+            MNTN_ADRES_AT,
+            MLNM,
+            AULNM,
+            DTL_ADRES,
+            RDNMADR_CD,
+            RN_DTL_ADRES,
+            SPO_NO_CD,
+            ORGN_CD,
+            LAT,
+            LON,
+            RM,
+            USE_YN,
+            RGSDE,
+            UPDDE
+        FROM tcm_cou_dd_obsv WHERE
+            1=1 AND DSCODE = #{id}
+    </select>
+</mapper>

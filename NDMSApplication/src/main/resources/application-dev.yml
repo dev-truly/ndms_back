@@ -1,0 +1,25 @@
+server:
+  port: 8097
+
+spring:
+  datasource:
+    hikari:
+      driver-class-name: org.mariadb.jdbc.Driver
+      jdbc-url: jdbc:mariadb://localhost:3356/nbsp?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+      username: root
+      password: maria!@34
+      pool-name: SpringBootJPAHikariCP
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 30000
+      max-lifetime: 2000000
+      connection-timeout: 30000
+
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      use-new-id-generator-mappings: true
+    properties:
+      hibernate:
+        format_sql: true
